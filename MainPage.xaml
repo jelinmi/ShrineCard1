@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:CardFez" 
+           
+             mc:Ignorable="d"
+             x:Class="CardFez.MainPage">
+    
+        <StackLayout>
+            <Frame BackgroundColor="DarkRed" Padding="15" CornerRadius="0" >
+                <Label Text="Welcome to FezCard!" HorizontalTextAlignment="Center" TextColor="White" FontSize="11" />
+            </Frame>
+
+            <Entry
+                    x:Name="HQID"
+                    FontSize="12"
+                    HeightRequest="35"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Shrine ID"
+                    PlaceholderColor="#cccccc"
+                  
+                    TextColor="Gray"
+                    VerticalOptions="End" />
+            <Button Text="Submit" HorizontalOptions="Center"  HeightRequest="30" WidthRequest="80" Clicked="CallRestApi" FontSize="9"  />
+            <controls:CustomWebView x:Name="webview3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+
+        </StackLayout>
+   
+
+</ContentPage> 
